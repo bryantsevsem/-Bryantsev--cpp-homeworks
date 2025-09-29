@@ -1,1 +1,1 @@
-# -Bryantsev--cpp-homeworks
+Домашние работы располагаются в ветке master!
