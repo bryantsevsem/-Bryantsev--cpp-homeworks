@@ -1,7 +1,8 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
-long long sumToN(int n) {
+long sumToN(int n) {
     if (n <= 0) {
         return 0;
     }
@@ -12,6 +13,7 @@ long long sumToN(int n) {
 }
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int n;
     cin >> n;
     cout << "Сумма: " << sumToN(n);

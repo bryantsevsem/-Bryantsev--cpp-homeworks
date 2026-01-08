@@ -1,11 +1,14 @@
 #include <iostream>
 #include <string>
+#include <windows.h>
 using namespace std;
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     string word;
+    cout << "Введите слово:" << '\n';
     getline(cin, word);
-    bool isIsogram = true;
+    bool isogram = true;
     for (size_t i = 0; i < word.size(); i++) {
         if (word[i] == ' ') {
             continue;
@@ -15,14 +18,14 @@ int main() {
                 continue;
             }
             if (word[i] == word[j]) {
-                isIsogram = false;
+                isogram = false;
                 break;
             }
         }
-        if (!isIsogram) {
+        if (!isogram) {
             break;
         }
     }
-    cout << boolalpha << isIsogram;
+    cout << boolalpha << isogram;
     return 0;
 }

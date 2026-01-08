@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 void doubleArray(int arr[], int size) {
@@ -8,6 +9,7 @@ void doubleArray(int arr[], int size) {
 }
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     const int size = 5;
     int arr[size] = {1, 2, 3, 4, 5};
     cout << "Исходный массив: ";

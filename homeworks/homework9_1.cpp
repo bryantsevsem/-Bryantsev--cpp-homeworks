@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int sumOfThree(int a, int b, int c) {
@@ -6,6 +7,7 @@ int sumOfThree(int a, int b, int c) {
 }
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int a;
     int b;
     int c;
