@@ -1,8 +1,11 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int year;
+    cout << "Введите год:" << '\n';
     cin >> year;
     bool leap = false;
     if (year % 400 == 0) {
