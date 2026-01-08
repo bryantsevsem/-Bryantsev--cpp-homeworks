@@ -1,8 +1,11 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     char c;
+    cout << "Введите символ:" <<'\n';
     cin >> c;
     int code = static_cast<int>(c);
     int nextCode = code + 1;
