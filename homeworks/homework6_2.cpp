@@ -1,7 +1,9 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int arr[2][2] = {{5, 2}, {7, 4}};
     cout << "Элементы массива:" << '\n';
     for (int i = 0; i < 2; i++) {
