@@ -1,8 +1,10 @@
 #include <iostream>
 #include <algorithm>
+#include <windows.h>
 using namespace std;
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int n;
     cin >> n;
     int *arr = new int[n];
