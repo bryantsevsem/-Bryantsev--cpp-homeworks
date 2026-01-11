@@ -1,8 +1,10 @@
 #include <iostream>
+#include <windows.h>
 #include <cmath>
 using namespace std;
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     double x;
     double y;
     cin >> x >> y;
