@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <windows.h>
 using namespace std;
 
 class Student {
@@ -9,38 +10,43 @@ private:
     double score;
 public:
     Student() : name(""), age(0), score(0.0) {}
-    Student(const string &studentName, int studentAge, double studentScore)
-        : name(studentName), age(studentAge), score(studentScore) {}
+
+    Student(const string& name, double score, int age)
+        : name(name), age(age), score(score) {}
+
+    void setName(const string& name) { this->name = name; }
+    void setAge(int age) { this->age = age; }
+    void setScore(double score) { this->score = score; }
+
+    string getName() const { return name; }
+    int getAge() const { return age; }
+    double getScore() const { return score; }
+
     bool isAdult() const {
         return age >= 18;
     }
     void updateScore(double delta) {
         score += delta;
     }
-    void show() const {
+    void show() {
         cout << "Имя: " << name << '\n';
         cout << "Возраст: " << age << '\n';
         cout << "Оценка: " << score << '\n';
-        cout << "Совершеннолетний: " << boolalpha << isAdult() << '\n';
+        cout << "Совершеннолетний: " << (isAdult() ? "да" : "нет") << '\n';
     }
 };
-
 int main() {
-    string name;
-    int age;
-    double score;
-    double delta;
-    if (!getline(cin >> ws, name)) {
-        name = "Иван";
-    }
-    if (!(cin >> age >> score >> delta)) {
-        age = 19;
-        score = 4.2;
-        delta = 0.3;
-    }
-    Student student(name, age, score);
-    student.show();
-    student.updateScore(delta);
-    student.show();
+    SetConsoleOutputCP(CP_UTF8);
+    /*Student student;
+    student.setName("Dася");
+    student.setAge(18);
+    student.setScore(3.14);*/
+    Student s1("Вася", 3, 14);
+    Student s2("Дуся", 5, 21);
+
+    s1.show();
+    s2.show();
+    s2.updateScore(-3);
+    s2.show();
     return 0;
 }
