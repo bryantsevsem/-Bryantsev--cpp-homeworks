@@ -16,7 +16,7 @@ int main() {
 
     bool state = true;
     for (const string& s : a) {
-        if (s == "flick") state = !state;   // переключаем начиная с этого элемента
+        if (s == "flick") state = !state;
         res.push_back(state);
     }
 
