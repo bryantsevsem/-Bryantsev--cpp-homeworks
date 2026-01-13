@@ -20,7 +20,7 @@ int main() {
     cerr << "Введите target:" << '\n';
     cin >> target;
 
-    unordered_map<long long, int> pos; // value -> index
+    unordered_map<long long, int> pos;
 
     for (int i = 0; i < n; ++i) {
         long long need = target - nums[i];
